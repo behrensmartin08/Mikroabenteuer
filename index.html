@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#174d3b">
+  <meta name="description" content="MIKROABENTEUER – kleine Fluchten, große Erlebnisse.">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+  <title>MIKROABENTEUER</title>
+</head>
+<body>
+<header class="topbar">
+  <button class="iconbtn" aria-label="Menü">☰</button>
+  <div class="brand-mini">MIKROABENTEUER</div>
+  <button class="iconbtn" id="installBtn" aria-label="App installieren" hidden>＋</button>
+</header>
+
+<main id="app">
+  <section id="home" class="screen active">
+    <div class="hero">
+      <div class="hero-art">
+        <div class="sun"></div><div class="mountain m1"></div><div class="mountain m2"></div>
+        <div class="train">🚆</div>
+      </div>
+      <div class="hero-copy">
+        <div class="logo-mark">△ ▲ △</div>
+        <h1>MIKROABENTEUER</h1>
+        <p>Entdecke deine Natur.</p>
+        <span class="badge">🚆 ALLE TOUREN AB HERFORD MIT DEM ZUG</span>
+        <div class="slogan">Kleine Fluchten.<br><em>Große Erlebnisse.</em></div>
+      </div>
+    </div>
+    <div class="section-title">Entdecke Touren</div>
+    <div class="categories">
+      <button data-filter="Ostwestfalen">Ostwestfalen</button>
+      <button data-filter="Deutschland">Deutschland</button>
+      <button data-filter="Schweden">Schweden</button>
+      <button data-filter="Mehrtagestouren">Mehrtagestouren</button>
+    </div>
+    <button class="primary wide" data-go="tours">Alle Touren ansehen →</button>
+  </section>
+
+  <section id="tours" class="screen">
+    <div class="page-head">
+      <button class="back" data-go="home">‹</button>
+      <h2>Touren</h2>
+      <span>☷</span>
+    </div>
+    <div class="chips">
+      <button class="chip active" data-filter="Alle">Alle</button>
+      <button class="chip" data-filter="Ostwestfalen">Ostwestfalen</button>
+      <button class="chip" data-filter="Deutschland">Deutschland</button>
+      <button class="chip" data-filter="Schweden">Schweden</button>
+    </div>
+    <div id="tourList" class="tour-list"></div>
+  </section>
+
+  <section id="detail" class="screen">
+    <div id="detailContent"></div>
+  </section>
+</main>
+
+<nav class="bottomnav">
+  <button data-go="home">⌂<small>Start</small></button>
+  <button data-go="tours">▧<small>Touren</small></button>
+  <button>♡<small>Favoriten</small></button>
+  <button>♧<small>Tipps</small></button>
+  <button>•••<small>Mehr</small></button>
+</nav>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<script src="app.js"></script>
+</body>
+</html>
