@@ -57,3 +57,19 @@ button{font:inherit;border:0;cursor:pointer}.topbar{height:58px;background:#fffd
   -webkit-text-fill-color: #fff;
   text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
 }
+#app {
+  background: #e8ebe5 !important;
+}
+
+#app .hero {
+  background-image: url("./IMG_20260816_064021.jpg") !important;
+  background-size: cover !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+}
+
+#app .hero h1,
+#app .hero .logo-mark {
+  color: white !important;
+  -webkit-text-fill-color: white !important;
+}
