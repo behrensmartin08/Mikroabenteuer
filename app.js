@@ -35,10 +35,7 @@ function openTour(id){
   document.getElementById("detailContent").innerHTML=`
    
 
-
-<div class="detail-hero ${t.kind}" style="${t.image ? `background-image:url('${t.image}');background-size:cover;background-position:center;` : ''}"><div><div style="font-size:13px;opacity:.9">Mikroabenteuer #${t.id}</div><h1>${t.title}</h1></div></div>
-
-
+<div class="detail-hero ${t.kind}" style="${t.image ? `background-image:url('/Mikroabenteuer/${t.image}');background-size:cover;background-position:center;` : ''}"><div><div style="font-size:13px;opacity:.9">Mikroabenteuer #${t.id}</div><h1>${t.title}</h1></div></div>
 
     <div class="detail-body">
       <div class="detail-tabs"><button class="active">Übersicht</button><button>Karte</button><button>Anreise</button><button>Tipps</button></div>
