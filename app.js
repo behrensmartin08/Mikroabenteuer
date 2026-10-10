@@ -36,8 +36,8 @@ function openTour(id){
    
 
 
-
 <div class="detail-hero ${t.kind}" style="${t.image ? `background-image:url('${t.image}');background-size:cover;background-position:center;` : ''}"><div><div style="font-size:13px;opacity:.9">Mikroabenteuer #${t.id}</div><h1>${t.title}</h1></div></div>
+
 
 
     <div class="detail-body">
