@@ -23,7 +23,7 @@ function renderTours(filter="Alle"){
   list.innerHTML=matches.map(t=>`
     <article class="tour-card" onclick="openTour(${t.id})">
    
-<div class="tour-image ${t.kind}" style="${t.image ? `background-image:url('/Mikroabenteuer/${t.image}');background-size:cover;background-position:center;` : ''}">${t.id===1?"⛰️":t.id===2?"🌅":"🪨"}</div>
+<div class="tour-image ${t.kind}" style="${t.image ? `background-image:url('${t.image}');background-size:cover;background-position:center;` : ''}">${t.id===1?"⛰️":t.id===2?"🌅":"🪨"}</div>
       <div class="tour-body"><h3>${t.title}</h3><div class="sub">${t.subtitle}</div>
       <div class="stats"><span>🥾 ${t.km}</span><span>↗ ${t.hm}</span><span>◷ ${t.time}</span><span class="difficulty">${t.difficulty}</span></div></div>
     </article>`).join("");
@@ -34,7 +34,7 @@ function openTour(id){
   document.getElementById("detailContent").innerHTML=`
    
 
-<div class="detail-hero ${t.kind}" style="${t.image ? `background-image:url('/Mikroabenteuer/${t.image}');background-size:cover;background-position:center;` : ''}"><div><div style="font-size:13px;opacity:.9">Mikroabenteuer #${t.id}</div><h1>${t.title}</h1></div></div>
+<div class="detail-hero ${t.kind}" style="${t.image ? `background-image:url('${t.image}');background-size:cover;background-position:center;` : ''}"><div><div style="font-size:13px;opacity:.9">Mikroabenteuer #${t.id}</div><h1>${t.title}</h1></div></div>
 
     <div class="detail-body">
       <div class="detail-tabs"><button class="active">Übersicht</button><button>Karte</button><button>Anreise</button><button>Tipps</button></div>
