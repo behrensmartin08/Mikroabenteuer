@@ -1,5 +1,5 @@
 const tours = [
-  {id:1,title:"Lippische Velmerstot",image:"IMG_20260928_185334.jpg", region:"Ostwestfalen",subtitle:"Felsen · Wald · Aussicht",km:"18,1 km",hm:"420 hm",time:"5:30 h",difficulty:"mittel",lat:51.83925,lon:8.95557,kind:"",desc:`Von Bielefeld oder Herford fährst du mit dem Zug nach Leopoldstal. Vom Bahnhof sind es ungefähr einen Kilometer bis zum Ausgangspunkt der Wanderung am Silbergrund. Hier tauchst du in den Wald ein und folgst den Wegen bergauf Richtung Lippische Velmerstot.
+  {id:1,title:"Lippische Velmerstot",image:"IMG_20260928_185334.jpg", region:"Ostwestfalen",subtitle:"Felsen · Wald · Aussicht",km:"18,1 km",hm:"420 hm",time:"5:30 h",difficulty:"mittel",lat:51.83925,lon:8.95557,kind:"",desc:`Von Herford fährst du mit dem Zug ca. 40 Minuten nach Leopoldstal. Vom Bahnhof ist es ungefähr einen Kilometer bis zum Ausgangspunkt der Wanderung am Silbergrund. Hier tauchst du in den Wald ein und folgst den Wegen bergauf Richtung Lippische Velmerstot.
 
 Zunächst begleitet dich das Rauschen des Silberbachs. Du wanderst über wurzelige Pfade, vorbei an moosbewachsenen Steinen und zwischen hohen Bäumen hindurch. Mit jedem Höhenmeter wird der Wald stiller und der Weg anspruchsvoller. Zwischendurch musst du über Wurzeln steigen und steilere Abschnitte bewältigen.
 
