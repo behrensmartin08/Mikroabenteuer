@@ -15,7 +15,7 @@ body{
 }
 button{font:inherit;border:0;cursor:pointer}.topbar{height:58px;background:#fffdf7;display:flex;align-items:center;justify-content:space-between;padding:0 18px;position:sticky;top:0;z-index:20;border-bottom:1px solid var(--line)}
 .brand-mini{font-weight:900;letter-spacing:.08em;font-size:14px}.iconbtn{background:none;font-size:24px;color:var(--ink)}
-#app{max-width:520px;margin:auto;background:#fffdf7;min-height:calc(100vh - 58px);padding-bottom:78px}
+#app{max-width:520px;margin:auto;background:rgba(255,253,247,0.88);min-height:calc(100vh - 58px);padding-bottom:78px}
 .screen{display:none}.screen.active{display:block}.hero{position:relative;min-height:620px;overflow:hidden;background:linear-gradient(#e8f0ed 0%,#f4d49a 44%,#173f3b 100%)}
 .hero-art{position:absolute;inset:0;overflow:hidden}.sun{position:absolute;width:105px;height:105px;border-radius:50%;background:#f6e6a8;top:145px;left:calc(50% - 52px);box-shadow:0 0 70px #fff1b0}
 .mountain{position:absolute;bottom:170px;width:130%;height:240px;clip-path:polygon(0 100%,22% 38%,37% 63%,53% 12%,72% 65%,88% 32%,100% 100%);background:#31594d}.m1{left:-30%;opacity:.9}.m2{left:10%;bottom:115px;background:#1f4039;opacity:.95}
