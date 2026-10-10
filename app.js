@@ -6,7 +6,8 @@ const tours = [
   {id:5,title:"Einsame Felsidylle in Karlshamn",region:"Schweden",subtitle:"Eine Bucht wie ein Paradies",km:"12,4 km",hm:"80 hm",time:"3:15 h",difficulty:"leicht",lat:53.10662,lon:8.46784,kind:"sunrise",desc:"Eine frühe Mikroabenteuer-Tour rund um den Olgahafen. Der Kartenpunkt ist zunächst als Orientierung hinterlegt; der genaue Wandertrack folgt später."},
     {id:6,title:"Sonnenuntergang über den Schären",region:"Schweden",subtitle:"Klettern - Über den Bäumen - Sonnenuntergang",km:"12,4 km",hm:"80 hm",time:"3:15 h",difficulty:"leicht",lat:53.10662,lon:8.46784,kind:"sunrise",desc:"Eine frühe Mikroabenteuer-Tour rund um den Olgahafen. Der Kartenpunkt ist zunächst als Orientierung hinterlegt; der genaue Wandertrack folgt später."},
     {id:7,title:"Auf den Brandenschrofen",region:"Deutschland",subtitle:"Berge - Bergwandern - Abenteuer",km:"12,4 km",hm:"80 hm",time:"3:15 h",difficulty:"leicht",lat:53.10662,lon:8.46784,kind:"sunrise",desc:"Eine frühe Mikroabenteuer-Tour rund um den Olgahafen. Der Kartenpunkt ist zunächst als Orientierung hinterlegt; der genaue Wandertrack folgt später."},
-    {id:8,title:"Feierabend-Drink an der Bar DüMar",region:"Ostwestfalen",subtitle:"Wasser · Karibik-Feeling · Sandstrand",km:"12,4 km",hm:"80 hm",time:"3:15 h",difficulty:"leicht",lat:53.10662,lon:8.46784,kind:"sunrise",desc:"Eine frühe Mikroabenteuer-Tour rund um den Olgahafen. Der Kartenpunkt ist zunächst als Orientierung hinterlegt; der genaue Wandertrack folgt später."},    ];
+    {id:8,title:"Feierabend-Drink an der Bar DüMar",region:"Ostwestfalen",subtitle:"Wasser · Karibik-Feeling · Sandstrand",km:"12,4 km",hm:"80 hm",time:"3:15 h",difficulty:"leicht",lat:53.10662,lon:8.46784,kind:"sunrise",desc:"Eine frühe Mikroabenteuer-Tour rund um den Olgahafen. Der Kartenpunkt ist zunächst als Orientierung hinterlegt; der genaue Wandertrack folgt später."},    
+      ];
 
 const screens = ["home","tours","detail"];
 let deferredPrompt = null;
