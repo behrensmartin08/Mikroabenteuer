@@ -6,7 +6,7 @@ Für den Olgasteg lohnt es sich, extrem früh aufzustehen - ich bin direkt nach 
 
 Du kannst auf einer der Bänke sitzen, den Blick über das Wasser schweifen lassen oder eine Vogelbeobachtungsstation erklimmen. Es gibt nichts zu erledigen und keinen Zeitdruck. Die Bewegung auf dem Fahrrad, die klare Morgenluft und die ruhige Natur geben deinen Gedanken Raum, sich zu sortieren.
 
-Und danach? Ein Kaffee oder ein Fischbrötchen direkt am Olgahafen machen das Mikroabenteuer perfekt."`},
+Und danach? Ein Kaffee oder ein Fischbrötchen direkt am Olgahafen machen das Mikroabenteuer perfekt.`},
   {id:3,title:"Klippen an der Teufelskanzel",image:"MVIMG_20260927_163311.jpg",region:"Ostwestfalen",subtitle:"Felsen · Weserbergland · Aussicht",km:"ca. 20 km",hm:"310 hm",time:"ca. 7 h",difficulty:"mittel",lat:52.16667,lon:9.25000,kind:"cliff",desc:`Von Herford aus geht es mit dem Zug in Richtung Braunschweig nach Hessisch Oldendorf. Ich habe die Tor an einem Sonntagnachmittag gemacht - im Hochsommer müsste es auch nach Feierabend noch gut gehen. Dort steigst du aufs Fahrrad und fährst etwa sieben Kilometer durch das hügelige Weserbergland zum Wanderparkplatz Kreuzsteinquelle. Die Steigungen bringen den Kreislauf in Schwung und lassen den Alltag langsam hinter dir.
 
 Vom Parkplatz folgst du dem Wanderweg durch den Wald in Richtung Hohenstein. Zwischen alten Bäumen, wurzeligen Pfaden und felsigem Gelände wird es zunehmend stiller.
