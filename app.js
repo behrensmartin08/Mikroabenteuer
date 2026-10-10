@@ -82,7 +82,10 @@ function openTour(id){
         <button onclick="alert('Der GPX-Track wird später ergänzt.')">⇩ GPX-Datei</button>
       </div>
      <div class="notice"><strong>🚆 Zuganreise ab Herford</strong><br>${t.train || "Informationen zur Zuganreise folgen."}</div>
-           <h3>💡 Mein Tipp</h3><p>Hier kannst du später deine persönlichen Hinweise zur Tour hinterlegen.</p>
+        
+<h3>💡 Mein Tipp</h3>
+<p>${t.tip || "Weitere Tipps zu dieser Tour folgen."}</p>
+   
     </div>`;
   setTimeout(()=>initMap(t),50);
 }
