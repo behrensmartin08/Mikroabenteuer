@@ -28,9 +28,32 @@ button{font:inherit;border:0;cursor:pointer}.topbar{height:58px;background:#fffd
 .detail-hero{height:260px;padding:18px;color:white;display:flex;align-items:flex-end;background:linear-gradient(145deg,#9eb7a8,#2d5d4c 52%,#172f2b)}.detail-hero.sunrise{background:linear-gradient(145deg,#f5d18e,#df8b62 52%,#244b48)}.detail-hero.cliff{background:linear-gradient(145deg,#7fa4a2,#315d62 52%,#183a35)}.detail-hero h1{font-size:30px;line-height:1;margin:0}.detail-body{padding:16px}.detail-body h3{font-size:19px;margin:18px 0 8px}.detail-tabs{display:flex;gap:6px;margin-top:-17px;position:relative;background:#fffdf7;padding:8px;border-radius:14px 14px 0 0}.detail-tabs button{flex:1;padding:9px;border-radius:10px;background:#f0eee7}.detail-tabs button.active{background:var(--green);color:white}.detail-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:5px;text-align:center;margin:12px 0 16px}.detail-stats strong{display:block;font-size:16px}.detail-stats span{font-size:11px;color:var(--muted)}.map{height:250px;border-radius:16px;overflow:hidden;border:1px solid var(--line);margin:12px 0}.actions{display:grid;grid-template-columns:1fr 1fr;gap:8px}.actions button{padding:13px;border-radius:13px;background:#e6eee6;color:var(--green);font-weight:850}.actions button:first-child{background:var(--green);color:#fff}.notice{background:#eef2e9;padding:14px;border-radius:14px;margin-top:14px}.bottomnav{position:fixed;bottom:0;left:0;right:0;max-width:520px;margin:auto;height:68px;background:#fffdf7;border-top:1px solid var(--line);display:flex;justify-content:space-around;align-items:center;z-index:30}.bottomnav button{background:none;color:#4c5b53;font-size:21px}.bottomnav small{display:block;font-size:10px;margin-top:2px}.bottomnav button:first-child,.bottomnav button:nth-child(2){color:var(--green)}
 @media(min-width:700px){#app{box-shadow:0 0 40px #17302818}.bottomnav{left:50%;transform:translateX(-50%)}}
 .hero {
-  background: linear-gradient(#0003, #0005), url("./IMG_20260816_064021.jpg") center/cover no-repeat !important;
+  background: none !important;
 }
 
 .hero-art {
+  position: absolute;
+  inset: 0;
+  background-image: url("./IMG_20260816_064021.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 0;
+}
+
+.hero-art .sun,
+.hero-art .mountain,
+.hero-art .train {
   display: none !important;
+}
+
+.hero-copy {
+  z-index: 1;
+}
+
+.hero h1,
+.hero .logo-mark {
+  color: #fff !important;
+  -webkit-text-fill-color: #fff;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
 }
