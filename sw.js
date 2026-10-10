@@ -1,5 +1,5 @@
 
-const CACHE = "mikroabenteuer-v4";
+const CACHE = "mikroabenteuer-v5";
 
 const ASSETS = [
   "./",
