@@ -10,7 +10,12 @@ let deferredPrompt = null;
 function show(id){document.querySelectorAll(".screen").forEach(s=>s.classList.remove("active"));document.getElementById(id).classList.add("active");window.scrollTo(0,0)}
 function renderTours(filter="Alle"){
   const list=document.getElementById("tourList");
-  list.innerHTML=tours.filter(t=>filter==="Alle"||t.region===filter).map(t=>`
+  const matches=tours.filter(t=>filter==="Alle"||t.region===filter);
+  if(!matches.length){
+    list.innerHTML=`<article class="community-card"><h3>${filter}</h3><p>Hier gibt es noch keine eingetragenen Touren. Die Rubrik ist vorbereitet und kann nach und nach mit passenden Mikroabenteuern gefüllt werden.</p></article>`;
+    return;
+  }
+  list.innerHTML=matches.map(t=>`
     <article class="tour-card" onclick="openTour(${t.id})">
       <div class="tour-image ${t.kind}">${t.id===1?"⛰️":t.id===2?"🌅":"🪨"}</div>
       <div class="tour-body"><h3>${t.title}</h3><div class="sub">${t.subtitle}</div>

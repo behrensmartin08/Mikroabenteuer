@@ -1,14 +1,14 @@
-FACG. RAUS<!doctype html>
+<!doctype html>
 <html lang="de">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
   <meta name="theme-color" content="#174d3b">
-  <meta name="description" content="EINFACH.RAUS – Entdecke Deine Natur.">
+  <meta name="description" content="MIKROABENTEUER – kleine Fluchten, große Erlebnisse.">
   <link rel="manifest" href="manifest.webmanifest">
   <link rel="icon" href="icon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="style.css">
-  <title>EINFACH.RAUS</title>
+  <title>MIKROABENTEUER</title>
 </head>
 <body>
 <header class="topbar">
@@ -28,8 +28,8 @@ FACG. RAUS<!doctype html>
         <div class="logo-mark">△ ▲ △</div>
         <h1>MIKROABENTEUER</h1>
         <p>Entdecke deine Natur.</p>
-        <span class="badge">KLeine Fluchten aus dem Alltag in und um Ostwestfalen</span>
-        <div class="slogan">Alltag raus.<br><em>Erlebnis rein.</em></div>
+        <span class="badge"><span class="train-symbol">🚆</span><span>ALLE TOUREN AB HERFORD MIT DEM ZUG</span></span>
+        <div class="slogan">Kleine und größere Alltagsfluchten<br><em>– nicht nur bei ADHS.</em></div>
       </div>
     </div>
     <div class="section-title">Entdecke Touren</div>
@@ -37,7 +37,10 @@ FACG. RAUS<!doctype html>
       <button data-filter="Ostwestfalen">Ostwestfalen</button>
       <button data-filter="Deutschland">Deutschland</button>
       <button data-filter="Schweden">Schweden</button>
+      <button data-filter="Mehrtagestouren">Mehrtagestouren</button>
       <button data-filter="Mit Kindern">Mit Kindern</button>
+      <button data-go="community">Community</button>
+      <button data-go="about">Über mich</button>
     </div>
     <button class="primary wide" data-go="tours">Alle Touren ansehen →</button>
   </section>
@@ -59,6 +62,28 @@ FACG. RAUS<!doctype html>
 
   <section id="detail" class="screen">
     <div id="detailContent"></div>
+  </section>
+
+  <section id="community" class="screen">
+    <div class="page-head"><button class="back" data-go="home">‹</button><h2>Community</h2><span>♧</span></div>
+    <div class="community-intro">
+      <div class="community-symbol">♧</div>
+      <h1>Mikroabenteuer verbinden</h1>
+      <p>Hier ist Platz für deine Ideen, Erfahrungen und Lieblingsorte. Entdecke Inspiration und teile künftig deine eigenen Alltagsfluchten.</p>
+      <span class="coming-soon">COMMUNITY IM AUFBAU</span>
+    </div>
+    <article class="community-card"><h3>Was hier entstehen soll</h3><ul><li>Tipps und Erfahrungen zu Touren</li><li>Ideen für kleine Auszeiten im Alltag</li><li>Empfehlungen für familienfreundliche Abenteuer</li></ul><p>Beiträge können in dieser Version noch nicht direkt veröffentlicht werden.</p></article>
+  </section>
+
+  <section id="about" class="screen">
+    <div class="page-head"><button class="back" data-go="home">‹</button><h2>Über mich</h2><span>♡</span></div>
+    <div class="community-intro">
+      <div class="community-symbol">🌿</div>
+      <h1>Einfach raus – entdecke deine Natur</h1>
+      <p>Ich glaube, dass es nicht viel braucht, um dem Alltag für einen Moment zu entkommen: einen Zug, ein Stück Weg und die Neugier auf das, was draußen wartet.</p>
+      <p>Hier findest du kleine und größere Alltagsfluchten – mit Touren, praktischen Tipps und Ideen, die sich ins echte Leben einfügen.</p>
+      <p>Rauskommen muss nicht kompliziert oder teuer sein. Es geht darum, die Natur wieder als Teil des eigenen Lebens zu entdecken.</p>
+    </div>
   </section>
 </main>
 
