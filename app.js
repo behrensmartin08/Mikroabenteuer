@@ -22,7 +22,9 @@ function renderTours(filter="Alle"){
   }
   list.innerHTML=matches.map(t=>`
     <article class="tour-card" onclick="openTour(${t.id})">
-      <div class="tour-image ${t.kind}'"style=${t.image ? `background-image:url('${t.image}background-size:cover;background-position:center;`:''}">${t.id===1?"⛰️":t.id===2?"🌅":"🪨"}</div>
+   
+<div class="tour-image ${t.kind}" style="${t.image ? `background-image:url('${t.image}');background-size:cover;background-position:center;` : ''}">${t.id===1?"⛰️":t.id===2?"🌅":"🪨"}</div>
+
       <div class="tour-body"><h3>${t.title}</h3><div class="sub">${t.subtitle}</div>
       <div class="stats"><span>🥾 ${t.km}</span><span>↗ ${t.hm}</span><span>◷ ${t.time}</span><span class="difficulty">${t.difficulty}</span></div></div>
     </article>`).join("");
