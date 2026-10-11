@@ -34,7 +34,7 @@ Ich bin einfach hinauf zu den Klippen gewandert und kurz nach Einbruch der Dämm
 packlist: [
   "Wanderschuhe mit gutem Profil",
   "Wanderkarte",
-  "Zelt", "Schlafsack", "Luftmatratze", "Gaskocher und Geschirr", "Badehose", "Handtuch", "Spannseile zum Wäschetrocknen", "Autan", "Zeckenkarte", "Sonnencreme", "Hafermilchpulver vom Rossmann", "Wechselkleidung", "Handschaufel für Exkremente-Entsorgung", "MP3-Player", "Powerbank", "regenfeste Fahrradtaschen", 
+  "Zelt", "Schlafsack", "Luftmatratze", "Gaskocher und Geschirr", "Badehose", "Handtuch", "Spannseile zum Wäschetrocknen", "Autan", "Zeckenkarte", "Sonnencreme", "Hafermilchpulver vom Rossmann", "Haferflocken", "Wasser", "Couscous", "Tütensuppen", "Trockenfleisch", "Instant-Kaffee", "Feuerzeug", "Grillanzünder (alternativ Birkenrinde sammeln)", "Wechselkleidung", "Handschaufel für Exkremente-Entsorgung", "MP3-Player", "Powerbank", "regenfeste Fahrradtaschen", 
   "Regenjacke",
   "Taschenlampe"
 ],
