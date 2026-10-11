@@ -81,13 +81,23 @@ function openTour(id){
 
   show("detail");
 
-  const packliste = t.packlist || [
-    "Wasser und Proviant",
-    "Wetterfeste Kleidung",
-    "Feste Schuhe",
-    "Handy mit geladenem Akku",
-    "Kleine Erste-Hilfe-Ausrüstung"
-  ];
+
+const standardPackliste = [
+  "Wasser und Proviant",
+  "Wetterfeste Kleidung",
+  "Feste Schuhe",
+  "Handy mit geladenem Akku",
+  "Kleine Erste-Hilfe-Ausrüstung",
+  "Taschentücher",
+  "Müllbeutel",
+  "Personalausweis und Fahrkarte"
+];
+
+const packliste = [
+  ...standardPackliste,
+  ...(t.packlist || [])
+];
+
 
   document.getElementById("detailContent").innerHTML = `
     <div class="detail-hero ${t.kind || ''}"
