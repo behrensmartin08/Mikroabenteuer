@@ -85,6 +85,32 @@ function renderTours(filter="Alle"){
     </article>`).join("");
 }
 
+
+
+const natureFacts = [
+  "Wald und Stresshormone: Ein Waldspaziergang kann Stress reduzieren. Studien bringen Waldaufenthalte mit einem niedrigeren Cortisolspiegel in Verbindung.",
+  "Bewegung und Denken: Bewegung kann Konzentration unterstützen. Dabei sind unter anderem Dopamin und Noradrenalin beteiligt.",
+  "Kleine Details entdecken: Blätter und Käfer bewusst zu beobachten, aktiviert Wahrnehmungs- und Aufmerksamkeitsnetzwerke im Gehirn.",
+  "Weniger Reize: Ruhige Naturorte können entlasten, weil weniger konkurrierende Reize verarbeitet werden müssen.",
+  "Ohne Leistungsdruck: Entspannung ohne Leistungsziele kann Stressreaktionen verringern, an denen das autonome Nervensystem beteiligt ist.",
+  "Wasser beruhigt: Gleichmäßige Bewegungen und Geräusche von Wasser können die Aufmerksamkeit sanft binden und die Entspannung unterstützen.",
+  "Sinne erleben: Wind, Gerüche und Naturgeräusche aktivieren unterschiedliche Wahrnehmungssysteme im Gehirn.",
+  "Wiederholung gibt Halt: Vertraute Wege bieten Orientierung und können die mentale Belastung durch Unsicherheit verringern.",
+  "Kleine Abenteuer reichen: Schon ein kurzer Umgebungswechsel kann Aufmerksamkeit und Aktivitätsniveau beeinflussen.",
+  "Tageslicht nutzen: Licht erreicht über die Netzhaut die innere Uhr im Gehirn und beeinflusst den Schlaf-Wach-Rhythmus.",
+  "Muster erkennen: Das Gehirn erkennt Muster in Blättern, Ästen und Wellen und hilft damit, Sinneseindrücke zu ordnen.",
+  "Jede Jahreszeit ist anders: Neue Farben, Gerüche und Temperaturen aktivieren unterschiedliche Wahrnehmungs- und Gedächtnisprozesse.",
+  "Allein unterwegs: Ruhige Phasen schaffen Raum für eigene Gedanken und Erinnerungen.",
+  "Staunen verändert den Blick: Beeindruckende Landschaften binden Aufmerksamkeit und können die Wahrnehmung eigener Probleme verändern.",
+  "Genau hinschauen: Das gezielte Suchen nach Naturmaterialien lenkt die Aufmerksamkeit auf bestimmte Merkmale.",
+  "Kleine Aufgaben helfen: Wege zu finden oder Spuren zu entdecken fordert Planung und Handlungssteuerung, sogenannte exekutive Funktionen.",
+  "Flexibel bleiben: Wer Pläne anpasst, nutzt kognitive Flexibilität, um auf veränderte Bedingungen zu reagieren.",
+  "Neurodiversität ist Vielfalt: Menschen unterscheiden sich unter anderem in Aufmerksamkeit und sensorischer Verarbeitung.",
+  "Natur für alle: Passende Weglängen und Schwierigkeitsgrade können Überforderung reduzieren und die Selbstregulation unterstützen.",
+  "Du musst dich nicht optimieren: Natur darf einfach Freude machen. Positive Erlebnisse können Belohnungs- und Emotionsnetzwerke im Gehirn aktivieren."
+];
+
+
 function openTour(id){
   const t = tours.find(x => x.id === id);
   if (!t) return;
