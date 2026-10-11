@@ -84,7 +84,7 @@ function openTour(id){
   const packliste = t.packlist || [
     "Wasser und Proviant",
     "Wetterfeste Kleidung",
-    "Passende Schuhe",
+    "Feste Schuhe",
     "Handy mit geladenem Akku",
     "Kleine Erste-Hilfe-Ausrüstung"
   ];
