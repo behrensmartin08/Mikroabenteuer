@@ -74,33 +74,123 @@ function renderTours(filter="Alle"){
       <div class="stats"><span>🥾 ${t.km}</span><span>↗ ${t.hm}</span><span>◷ ${t.time}</span><span class="difficulty">${t.difficulty}</span></div></div>
     </article>`).join("");
 }
-function openTour(id){
-  const t=tours.find(x=>x.id===id);
-  show("detail");
-  document.getElementById("detailContent").innerHTML=`
-   
 
-<div class="detail-hero ${t.kind}" style="${t.image ? `background-image:url('${t.image}');background-size:cover;background-position:center;` : ''}"><div><div style="font-size:13px;opacity:.9">Mikroabenteuer #${t.id}</div><h1>${t.title}</h1></div></div>
+function openTour(id){
+  const t = tours.find(x => x.id === id);
+  if (!t) return;
+
+  show("detail");
+
+  const packliste = t.packlist || [
+    "Wasser und Proviant",
+    "Wetterfeste Kleidung",
+    "Passende Schuhe",
+    "Handy mit geladenem Akku",
+    "Kleine Erste-Hilfe-Ausrüstung"
+  ];
+
+  document.getElementById("detailContent").innerHTML = `
+    <div class="detail-hero ${t.kind || ''}"
+      style="${t.image ? `background-image:url('${t.image}');background-size:cover;background-position:center;` : ''}">
+      <div>
+        <div style="font-size:13px;opacity:.9">Mikroabenteuer #${t.id}</div>
+        <h1>${t.title}</h1>
+      </div>
+    </div>
 
     <div class="detail-body">
-      <div class="detail-tabs"><button class="active">Übersicht</button><button>Karte</button><button>Anreise</button><button>Tipps</button></div>
+
+      <div class="detail-tabs">
+        <button onclick="tourSection('beschreibung-${t.id}')">Übersicht</button>
+        <button onclick="tourSection('karte-${t.id}')">Karte</button>
+        <button onclick="tourSection('anreise-${t.id}')">Anreise</button>
+        <button onclick="tourSection('tipps-${t.id}')">Tipps</button>
+        <button onclick="tourSection('packliste-${t.id}')">🎒 Packliste</button>
+      </div>
+
       <div class="detail-stats">
-        <div><strong>${t.km}</strong><span>Strecke</span></div><div><strong>${t.hm}</strong><span>Höhenmeter</span></div><div><strong>${t.time}</strong><span>Gehzeit</span></div><div><strong>${t.difficulty}</strong><span>Schwierigkeit</span></div>
+        <div><strong>${t.km}</strong><span>Strecke</span></div>
+        <div><strong>${t.hm}</strong><span>Höhenmeter</span></div>
+        <div><strong>${t.time}</strong><span>Gehzeit</span></div>
+        <div><strong>${t.difficulty}</strong><span>Schwierigkeit</span></div>
       </div>
-      <h3>Beschreibung</h3><p>${t.desc}</p>
-      <div id="map-${t.id}" class="map"></div>
-      <div class="actions">
-        <button onclick="focusMap(${t.id})">🗺 Route auf Karte</button>
-        <button onclick="alert('Der GPX-Track wird später ergänzt.')">⇩ GPX-Datei</button>
-      </div>
-     <div class="notice"><strong>🚆 Zuganreise ab Herford</strong><br>${t.train || "Informationen zur Zuganreise folgen."}</div>
-        
-<h3>💡 Mein Tipp</h3>
-<p>${t.tip || "Weitere Tipps zu dieser Tour folgen."}</p>
-   
+
+      <section id="beschreibung-${t.id}">
+        <h3>Beschreibung</h3>
+        <p>${t.desc}</p>
+      </section>
+
+      <section id="karte-${t.id}">
+        <h3>🗺 Karte und Orientierung</h3>
+        <div id="map-${t.id}" class="map"></div>
+        <div class="actions">
+          <button onclick="focusMap(${t.id})">🗺 Route auf Karte</button>
+          <button onclick="alert('Der GPX-Track wird später ergänzt.')">⇩ GPX-Datei</button>
+        </div>
+      </section>
+
+      <section id="anreise-${t.id}">
+        <h3>🚆 Anreise ab Herford</h3>
+        <div class="notice">
+          ${t.train || "Informationen zur Zuganreise folgen."}
+        </div>
+      </section>
+
+      <section id="tipps-${t.id}">
+        <h3>💡 Mein Tipp</h3>
+        <p>${t.tip || "Weitere Tipps zu dieser Tour folgen."}</p>
+      </section>
+
+      <section id="packliste-${t.id}">
+        <h3>🎒 Meine Packliste</h3>
+        <p>Hake ab, was du bereits eingepackt hast.</p>
+
+        <div class="packliste-items">
+          ${packliste.map((item, i) => `
+            <label style="display:flex;align-items:flex-start;gap:10px;padding:10px 0;border-bottom:1px solid #ddd;cursor:pointer;">
+              <input type="checkbox"
+                style="width:18px;height:18px;flex-shrink:0;margin-top:2px;">
+              <span>${item}</span>
+            </label>
+          `).join("")}
+        </div>
+
+        <button onclick="resetPackliste(${t.id})"
+          style="margin-top:15px;">
+          ↻ Packliste zurücksetzen
+        </button>
+      </section>
+
     </div>`;
-  setTimeout(()=>initMap(t),50);
+
+  setTimeout(() => initMap(t), 100);
 }
+
+function tourSection(sectionId){
+  const section = document.getElementById(sectionId);
+  if (!section) return;
+
+  section.scrollIntoView({
+    behavior: "smooth",
+    block: "start"
+  });
+
+  if (sectionId.startsWith("karte-")) {
+    const id = Number(sectionId.replace("karte-", ""));
+    setTimeout(() => {
+      if (maps[id]) maps[id].invalidateSize();
+    }, 350);
+  }
+}
+
+function resetPackliste(id){
+  const section = document.getElementById(`packliste-${id}`);
+  if (!section) return;
+
+  section.querySelectorAll('input[type="checkbox"]')
+    .forEach(input => input.checked = false);
+}
+
 const maps={};
 function initMap(t){
   const el=document.getElementById(`map-${t.id}`); if(!el) return;
