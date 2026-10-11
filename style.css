@@ -24,3 +24,41 @@ button{font:inherit;border:0;cursor:pointer}.topbar{height:58px;background:#fffd
 .train-symbol{font-size:26px;flex-shrink:0}
 .slogan{font-size:clamp(25px,6vw,31px);max-width:100%;margin-top:auto;margin-bottom:24px}
 .categories button{padding:12px 8px}
+
+
+/* Hervorgehobene Packliste */
+.packliste-box {
+  margin-top: 24px;
+  padding: 18px;
+  border: 2px solid #174d3b;
+  border-radius: 14px;
+  background: #f0f6f1;
+  box-shadow: 0 3px 10px rgba(23, 77, 59, 0.10);
+}
+
+.packliste-box h3 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #cbded0;
+  color: #174d3b;
+  font-size: 1.2rem;
+}
+
+.packliste-box p {
+  color: #42564a;
+  margin-bottom: 12px;
+}
+
+.packliste-box label {
+  border-bottom: 1px solid #d8e4da !important;
+  padding: 12px 0 !important;
+}
+
+.packliste-box input[type="checkbox"] {
+  accent-color: #174d3b;
+}
+
+.packliste-box button {
+  border-radius: 8px;
+}
