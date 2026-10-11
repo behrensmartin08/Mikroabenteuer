@@ -161,10 +161,17 @@ const packliste = [
         <div><strong>${t.difficulty}</strong><span>Schwierigkeit</span></div>
       </div>
 
+    
+      <div class="nature-fact">
+        <strong>🌿 Schon gewusst? Natur und Gehirn</strong>
+        <p>${natureFacts[(t.id - 1) % natureFacts.length]}</p>
+      </div>
+
       <section id="beschreibung-${t.id}">
         <h3>Beschreibung</h3>
         <p>${t.desc}</p>
       </section>
+
 
       <section id="karte-${t.id}">
         <h3>🗺 Karte und Orientierung</h3>
