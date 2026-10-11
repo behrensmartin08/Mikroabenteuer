@@ -151,9 +151,11 @@ const packliste = [
         <p>${t.tip || "Weitere Tipps zu dieser Tour folgen."}</p>
       </section>
 
-      <section id="packliste-${t.id}">
-        <h3>🎒 Meine Packliste</h3>
-        <p>Hake ab, was du bereits eingepackt hast.</p>
+    
+<section id="packliste-${t.id}" class="packliste-box">
+  <h3>🎒 Meine Packliste</h3>
+  <p>Hake ab, was du bereits eingepackt hast.</p>
+
 
         <div class="packliste-items">
           ${packliste.map((item, i) => `
