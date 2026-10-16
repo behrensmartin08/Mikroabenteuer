@@ -213,6 +213,7 @@ const packliste = [
       </section>
 
 
+
 <section id="packliste-${t.id}" class="packliste-box">
   <div class="packliste-heading">
     <div class="packliste-icon" aria-hidden="true">🎒</div>
@@ -238,6 +239,22 @@ const packliste = [
       </div>
     </div>
   </div>
+
+  <div class="packliste-items">
+    ${packliste.map((item, i) => `
+      <label style="display:flex;align-items:flex-start;gap:10px;padding:10px 0;border-bottom:1px solid #ddd;cursor:pointer;">
+        <input type="checkbox"
+          onchange="updatePacklisteProgress(${t.id})"
+          style="width:18px;height:18px;flex-shrink:0;margin-top:2px;">
+        <span>${item}</span>
+      </label>
+    `).join("")}
+  </div>
+
+  <button onclick="resetPackliste(${t.id})"
+    style="margin-top:15px;">
+    ↻ Packliste zurücksetzen
+  </button>
 </section>
 
 
