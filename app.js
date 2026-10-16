@@ -253,6 +253,33 @@ const packliste = [
         </div>
 
         <button onclick="resetPackliste(${t.id})"
+
+
+function updatePacklisteProgress(id) {
+  const section = document.getElementById(`packliste-${id}`);
+  if (!section) return;
+
+  const boxes = section.querySelectorAll(
+    '.packliste-items input[type="checkbox"]'
+  );
+
+  const checked = section.querySelectorAll(
+    '.packliste-items input[type="checkbox"]:checked'
+  ).length;
+
+  const count = section.querySelector(`#pack-count-${id}`);
+  const fill = section.querySelector(`#pack-fill-${id}`);
+
+  if (count) count.textContent = `${checked} / ${boxes.length}`;
+
+  if (fill) {
+    fill.style.width = boxes.length
+      ? `${(checked / boxes.length) * 100}%`
+      : '0%';
+  }
+}
+
+        
           style="margin-top:15px;">
           ↻ Packliste zurücksetzen
         </button>
