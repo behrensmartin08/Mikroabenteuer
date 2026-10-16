@@ -251,62 +251,14 @@ const packliste = [
     `).join("")}
   </div>
 
-  <button onclick="resetPackliste(${t.id})"
-    style="margin-top:15px;">
+  <button onclick="resetPackliste(${t.id})" style="margin-top:15px;">
     ↻ Packliste zurücksetzen
   </button>
 </section>
 
-
-
-        <div class="packliste-items">
-          ${packliste.map((item, i) => `
-            <label style="display:flex;align-items:flex-start;gap:10px;padding:10px 0;border-bottom:1px solid #ddd;cursor:pointer;">
-             
-   <input type="checkbox"
-     onchange="updatePacklisteProgress(${t.id})"
-     style="width:18px;height:18px;flex-shrink:0;margin-top:2px;">
-   
-              <span>${item}</span>
-            </label>
-          `).join("")}
-        </div>
-
-        <button onclick="resetPackliste(${t.id})"
-
-
-function updatePacklisteProgress(id) {
-  const section = document.getElementById(`packliste-${id}`);
-  if (!section) return;
-
-  const boxes = section.querySelectorAll(
-    '.packliste-items input[type="checkbox"]'
-  );
-
-  const checked = section.querySelectorAll(
-    '.packliste-items input[type="checkbox"]:checked'
-  ).length;
-
-  const count = section.querySelector(`#pack-count-${id}`);
-  const fill = section.querySelector(`#pack-fill-${id}`);
-
-  if (count) count.textContent = `${checked} / ${boxes.length}`;
-
-  if (fill) {
-    fill.style.width = boxes.length
-      ? `${(checked / boxes.length) * 100}%`
-      : '0%';
-  }
-}
-
-        
-          style="margin-top:15px;">
-          ↻ Packliste zurücksetzen
-        </button>
-      </section>
-
     </div>`;
-updatePacklisteProgress(t.id);
+
+  updatePacklisteProgress(t.id);
   setTimeout(() => initMap(t), 100);
 }
 
