@@ -245,8 +245,11 @@ const packliste = [
         <div class="packliste-items">
           ${packliste.map((item, i) => `
             <label style="display:flex;align-items:flex-start;gap:10px;padding:10px 0;border-bottom:1px solid #ddd;cursor:pointer;">
-              <input type="checkbox"
-                style="width:18px;height:18px;flex-shrink:0;margin-top:2px;">
+             
+   <input type="checkbox"
+     onchange="updatePacklisteProgress(${t.id})"
+     style="width:18px;height:18px;flex-shrink:0;margin-top:2px;">
+   
               <span>${item}</span>
             </label>
           `).join("")}
@@ -286,7 +289,7 @@ function updatePacklisteProgress(id) {
       </section>
 
     </div>`;
-
+updatePacklisteProgress(t.id);
   setTimeout(() => initMap(t), 100);
 }
 
@@ -307,13 +310,42 @@ function tourSection(sectionId){
   }
 }
 
-function resetPackliste(id){
-  const section = document.getElementById(`packliste-${id}`);
-  if (!section) return;
 
-  section.querySelectorAll('input[type="checkbox"]')
-    .forEach(input => input.checked = false);
-}
+   function resetPackliste(id){
+     const section = document.getElementById(`packliste-${id}`);
+     if (!section) return;
+
+     section.querySelectorAll('input[type="checkbox"]')
+       .forEach(input => input.checked = false);
+
+     updatePacklisteProgress(id);
+   }
+
+
+   function updatePacklisteProgress(id) {
+     const section = document.getElementById(`packliste-${id}`);
+     if (!section) return;
+
+     const boxes = section.querySelectorAll(
+       '.packliste-items input[type="checkbox"]'
+     );
+
+     const checked = section.querySelectorAll(
+       '.packliste-items input[type="checkbox"]:checked'
+     ).length;
+
+     const count = section.querySelector(`#pack-count-${id}`);
+     const fill = section.querySelector(`#pack-fill-${id}`);
+
+     if (count) count.textContent = `${checked} / ${boxes.length}`;
+
+     if (fill) {
+       fill.style.width = boxes.length
+         ? `${(checked / boxes.length) * 100}%`
+         : '0%';
+     }
+   }
+   
 
 const maps={};
 function initMap(t){
