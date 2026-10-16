@@ -162,10 +162,28 @@ const packliste = [
       </div>
 
     
-      <div class="nature-fact">
-        <strong>🌿 Schon gewusst? Natur und Gehirn</strong>
-        <p>${natureFacts[(t.id - 1) % natureFacts.length]}</p>
+     
+<div class="nature-fact">
+  <div class="nature-fact-inner">
+    <div class="nature-fact-mark" aria-hidden="true">
+      <svg viewBox="0 0 48 48" role="img">
+        <path d="M24 41V17" />
+        <path d="M24 29C12 29 8 21 8 12c10 0 16 5 16 17" />
+        <path d="M24 23C24 11 31 6 41 6c0 11-6 17-17 17" />
+        <path d="M24 35c-6-7-11-8-16-7" />
+      </svg>
+    </div>
+
+    <div class="nature-fact-copy">
+      <div class="nature-fact-eyebrow">
+        NATURWISSEN · MIKROABENTEUER
       </div>
+      <strong>Schon gewusst?</strong>
+      <p>${natureFacts[(t.id - 1) % natureFacts.length]}</p>
+    </div>
+  </div>
+</div>
+
 
       <section id="beschreibung-${t.id}">
         <h3>Beschreibung</h3>
