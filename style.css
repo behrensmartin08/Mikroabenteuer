@@ -919,3 +919,11 @@ button {
 .categories button:active {
   transform: scale(0.98);
 }
+.hero-logo {
+  display: block;
+  width: 150px;
+  max-width: 45%;
+  height: auto;
+  margin: 0 auto 18px;
+  object-fit: contain;
+}
