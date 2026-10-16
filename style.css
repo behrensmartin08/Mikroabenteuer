@@ -218,3 +218,77 @@ button{font:inherit;border:0;cursor:pointer}.topbar{height:58px;background:#fffd
     min-height: 160px;
   }
 }
+
+
+
+/* Individueller Natur-Infokasten */
+
+.nature-fact {
+  margin: 22px 0;
+  padding: 19px 16px;
+  border: 1px solid #d7e2d6;
+  border-left: 4px solid var(--green2);
+  border-radius: 5px 18px 18px 5px;
+  background: linear-gradient(120deg, #f1f5ee, #faf8f0);
+  box-shadow: 0 5px 16px rgba(23,48,40,.055);
+  text-align: left;
+}
+
+.nature-fact-inner {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+}
+
+.nature-fact-mark {
+  flex: 0 0 48px;
+  width: 48px;
+  height: 48px;
+  display: grid;
+  place-items: center;
+  border-radius: 15px;
+  background: #dfe9dc;
+}
+
+.nature-fact-mark svg {
+  width: 34px;
+  height: 34px;
+  fill: none;
+  stroke: #245743;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.nature-fact-copy {
+  min-width: 0;
+  flex: 1;
+}
+
+.nature-fact-eyebrow {
+  color: #6d806e;
+  font-size: 9px;
+  font-weight: 850;
+  letter-spacing: .12em;
+  line-height: 1.5;
+  margin-bottom: 5px;
+}
+
+.nature-fact strong {
+  display: block;
+  margin: 0 0 7px;
+  color: #204d3c;
+  font-family: Georgia, serif;
+  font-size: 19px;
+  text-align: left;
+}
+
+.nature-fact p {
+  margin: 0;
+  color: #405349;
+  font-size: 13px;
+  line-height: 1.6;
+  text-align: left;
+}
+
+
