@@ -212,10 +212,34 @@ const packliste = [
         <p>${t.tip || "Weitere Tipps zu dieser Tour folgen."}</p>
       </section>
 
-    
+
 <section id="packliste-${t.id}" class="packliste-box">
-  <h3>🎒 Meine Packliste</h3>
-  <p>Hake ab, was du bereits eingepackt hast.</p>
+  <div class="packliste-heading">
+    <div class="packliste-icon" aria-hidden="true">🎒</div>
+    <div>
+      <div class="packliste-eyebrow">GUT VORBEREITET</div>
+      <h3>Meine Packliste</h3>
+    </div>
+  </div>
+
+  <p class="packliste-intro">
+    Hake ab, was du bereits eingepackt hast.
+  </p>
+
+  <div class="packliste-progress">
+    <div class="packliste-progress-label">
+      <span>Dein Abenteuer-Check</span>
+      <strong id="pack-count-${t.id}">0 / ${packliste.length}</strong>
+    </div>
+    <div class="packliste-track">
+      <div class="packliste-fill"
+        id="pack-fill-${t.id}"
+        style="width:0%">
+      </div>
+    </div>
+  </div>
+</section>
+
 
 
         <div class="packliste-items">
