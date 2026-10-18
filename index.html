@@ -4,11 +4,11 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
   <meta name="theme-color" content="#174d3b">
-  <meta name="description" content="MIKROABENTEUER – kleine Fluchten, große Erlebnisse.">
+  <meta name="description" content="Herr Fjord – Mikroabenteuer in Ostwestfalen und Skandinavien. Kleine Fluchten, große Erlebnisse.">
   <link rel="manifest" href="manifest.webmanifest">
   <link rel="icon" href="icon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="style.css">
-  <title>MIKROABENTEUER</title>
+  <title>Herr Fjord – Mikroabenteuer</title>
 </head>
 <body>
 <header class="topbar">
@@ -19,60 +19,29 @@
 
 <main id="app">
   <section id="home" class="screen active">
-    <div class="hero">
-      <div class="hero-art">
-        <div class="sun"></div><div class="mountain m1"></div><div class="mountain m2"></div>
-        
-      </div>
-      <div class="quick-categories" aria-label="Mikroabenteuer nach Zeit und Anlass">
-        <button class="quick-category" data-go="tours" aria-label="Nach Feierabend" title="Nach Feierabend">
-          <svg viewBox="0 0 64 64" aria-hidden="true"><path d="M10 54V13h25v41M35 23h17v31M17 21h4m-4 8h4m-4 8h4m5-16h4m-4 8h4m-4 8h4M6 54h52"/><rect x="39" y="38" width="17" height="13" rx="1"/><path d="M44 38v-4h7v4"/><path d="M47 8v5m-7-2 3 3m11-3-3 3"/></svg>
-          <span class="quick-underline underline-green"></span>
-        </button>
-        <button class="quick-category" data-go="tours" aria-label="Am Wochenende – 1 day" title="Am Wochenende – 1 day">
-          <span class="one-day">1 day</span>
-          <svg viewBox="0 0 64 64" aria-hidden="true"><path d="M5 54 23 26l9 14 9-24 18 38H5Z"/><path d="m23 26 5 8m13-18 5 9m-17 12 5-3m-5 12 6-4m-6 4h16M13 54l9-14 8 14m12-1 7-11 7 11"/><path d="M10 54h48"/></svg>
-          <span class="quick-underline underline-orange"></span>
-        </button>
-        <button class="quick-category" data-go="tours" aria-label="Mit Kindern" title="Mit Kindern">
-          <svg viewBox="0 0 64 64" aria-hidden="true"><circle cx="22" cy="14" r="6"/><circle cx="43" cy="17" r="6"/><path d="M22 20v17m0-11-9 9m9-7 10 6m-10 3-7 13m7-13 8 13M43 23v15m0-10-8 6m8-4 9 4m-9 4-7 12m7-12 8 12"/><path d="M7 55h50"/></svg>
-          <span class="quick-underline underline-green"></span>
-        </button>
-        <button class="quick-category" data-go="tours" aria-label="Mehrtagestouren" title="Mehrtagestouren">
-          <svg viewBox="0 0 64 64" aria-hidden="true"><path d="M5 54 22 20l13 24 8-15 16 25H5Z"/><path d="m22 20 5 10m8 14 8-15m-21 7 5 2m-2 7 7-1"/><path d="M13 54 23 36l10 18M34 54l10-14 11 14"/><path d="M48 10a8 8 0 0 0 8 10 9 9 0 1 1-8-10Z"/><path d="M5 54h54"/></svg>
-          <span class="quick-underline underline-slate"></span>
-        </button>
-      </div>
-      <div class="hero-copy">
-        <h1>MIKROABENTEUER</h1>
-        <p>Entdecke Deine Natur.</p>
-        <button class="hero-cta" data-go="tours" aria-label="Zu den Touren">Zu den Touren <span aria-hidden="true">→</span></button>
-        <div class="slogan">Kleine und größere Alltagsfluchten<br><em>– nicht nur bei ADHS.</em></div>
-      </div>
+    <div class="hero hero-herrfjord">
+      <div class="hero-art"></div>
+      <div class="hero-topline"><img class="hero-logo" src="Logo.png" alt="HerrFjord – Mikroabenteuer"><button class="iconbtn hero-menu" aria-label="Menü">☰</button></div>
+      <div class="hero-copy"><h1>Dein nächstes Abenteuer wartet.</h1><p class="hero-subtitle">Kleine und größere Alltagsfluchten –<br><em>nicht nur bei ADHS.</em></p></div>
     </div>
-    <section class="personal-intro" aria-label="Über HerrFjord">
-      <img class="personal-avatar" src="MVIMG_20260927_163311.jpg" alt="HerrFjord draußen unterwegs" loading="lazy">
-      <div class="personal-intro-copy">
-        <p class="eyebrow">MIKROABENTEUER VOR DER HAUSTÜR</p>
-        <h2>Moin, ich bin HerrFjord.</h2>
-        <p>Ich zeige dir kleine und größere Alltagsfluchten – draußen, nah dran und ohne großen Aufwand. Für neue Wege, frische Luft und Abenteuer, die ins echte Leben passen.</p>
-      </div>
+    <div class="quick-categories" aria-label="Mikroabenteuer nach Zeit und Anlass">
+      <button class="quick-category" data-filter="Nach Feierabend" aria-label="Nach Feierabend"><span class="quick-icon"><svg viewBox="0 0 64 64"><path d="M12 54V10h28v44M40 23h13v31M7 54h51"/><rect x="31" y="35" width="22" height="16" rx="2"/><path d="M37 35v-4h10v4M36 42h12"/></svg></span><span>Nach<br>Feierabend</span></button>
+      <button class="quick-category" data-filter="Am Wochenende" aria-label="Am Wochenende"><span class="quick-icon"><svg viewBox="0 0 64 64"><path d="M5 52 22 27l10 14 10-24 17 35H5Z"/></svg><span class="one-day">1 day</span></span><span>Am<br>Wochenende</span></button>
+      <button class="quick-category" data-filter="Mit Kindern" aria-label="Mit Kindern"><span class="quick-icon"><svg viewBox="0 0 64 64"><circle cx="22" cy="14" r="6"/><circle cx="43" cy="17" r="6"/><path d="M22 20v17m0-11-9 9m9-7 10 6m-10 3-7 13m7-13 8 13M43 23v15m0-10-8 6m8-4 9 4m-9 4-7 12m7-12 8 12"/></svg></span><span>Mit<br>Kindern</span></button>
+      <button class="quick-category" data-filter="Mehrtagestouren" aria-label="Mehrtagestouren"><span class="quick-icon"><svg viewBox="0 0 64 64"><path d="M5 52 22 18l13 24 8-15 16 25H5Z"/></svg></span><span>Mehrtagestouren</span></button>
+    </div>
+    <section class="blog-intro"><div class="mountain-divider"><span></span><b>⌁⌃⌁</b><span></span></div>
+      <h2>Raus aus dem Alltag. Rein ins Abenteuer.</h2>
+      <p>Auf meinem Blog findest du Mikroabenteuer in Ostwestfalen und Skandinavien, besondere Orte, kleine Wandertouren und mehrtägige Entdeckungsreisen. Mit persönlichen Erfahrungen, praktischen Tipps und GPS-Routen zum Nachmachen. Für alle, die draußen Freiheit suchen – ob nach Feierabend, am Wochenende oder mit Kindern. Und für alle, deren Kopf manchmal einfach eine Pause braucht.</p>
+      <button class="planning-cta" data-go="tipps"><span class="planning-symbol">⌖</span> Tipps für Planung und Tour <span>›</span></button>
+      <p class="planning-caption">Ausrüstung, Anreise, Packlisten, Karten und praktische Tipps für dein nächstes Mikroabenteuer.</p>
     </section>
-    <div class="section-title">Entdecke Mikroabenteuer</div>
-    <div class="categories">
-      <button data-filter="Ostwestfalen">Ostwestfalen</button>
-      <button data-filter="Deutschland">Deutschland</button>
-      <button data-filter="Schweden">Schweden</button>
-      <button data-go="buch">Das Buch: Einfach raus</button>
-      <button data-filter="Mit Kindern">Mit Kindern</button>
-      <button data-go="community">Community</button>
-      <button data-go="about">Über mich</button>
-    </div>
-      <div style="text-align:center; padding:24px 10px 18px; font-size:12px; line-height:1.8; color:#777;">
-      © 2026 Martin Behrens (Texte & Fotos)<br>
-      Höckerstr. 4, 32052 Herford<br>
-      <a href="mailto:behrensmartitn08@gmail.com" style="color:inherit; text-decoration:none;">behrensmartin08@gmail.com</a>
-    </div>
+    <section class="instagram-section" aria-label="Instagram"><div class="instagram-heading"><span class="instagram-icon">◎</span><div class="instagram-heading-copy"><h2>Unterwegs mit Herr Fjord</h2><p>Echte Erlebnisse. Echte Orte. Neue Inspiration.</p></div><a class="instagram-more" href="https://www.instagram.com/behrensmartin08/" target="_blank" rel="noopener noreferrer">Mehr auf<br>Instagram ›</a></div>
+      <div class="instagram-photos"><a href="https://www.instagram.com/behrensmartin08/" target="_blank" rel="noopener noreferrer"><img src="MVIMG_20260817_192218.jpg" alt="Mikroabenteuer an der schwedischen Küste" loading="lazy"></a><a href="https://www.instagram.com/behrensmartin08/" target="_blank" rel="noopener noreferrer"><img src="IMG_20260816_064021.jpg" alt="Natur und Camping unterwegs" loading="lazy"></a><a href="https://www.instagram.com/behrensmartin08/" target="_blank" rel="noopener noreferrer"><img src="MVIMG_20260927_163311.jpg" alt="Draußen unterwegs" loading="lazy"></a></div>
+      <a class="instagram-button" href="https://www.instagram.com/behrensmartin08/" target="_blank" rel="noopener noreferrer"><span>◎</span> @behrensmartin08 auf Instagram <span>↗</span></a><p class="instagram-note">Die Bilder führen zu meinem Instagram-Profil.</p>
+    </section>
+    <div class="section-title">Entdecke Mikroabenteuer nach Region und Thema</div><div class="categories"><button data-filter="Deutschland">Deutschland</button><button data-filter="Schweden">Schweden</button><button data-filter="Ostwestfalen">Ostwestfalen</button><button data-go="buch">Das Buch: Einfach raus</button><button data-filter="Mit Kindern">Mit Kindern</button><button data-go="community">Community</button><button data-go="about">Über mich</button></div>
+    <div class="home-footer">© 2026 Martin Behrens (Texte &amp; Fotos)<br>Höckerstr. 4, 32052 Herford<br><a href="mailto:behrensmartin08@gmail.com">behrensmartin08@gmail.com</a></div>
   </section>
   <section id="tours" class="screen">
     <div class="page-head">
@@ -88,6 +57,7 @@
     </div>
     <div id="tourList" class="tour-list"></div>
   </section>
+<section id="tipps" class="screen"><div class="page-head"><button class="back" data-go="home" aria-label="Zurück">‹</button><h2>Tipps für Planung und Tour</h2><span>⌖</span></div><article class="tips-article"><p class="eyebrow">GUT VORBEREITET. FREI UNTERWEGS.</p><h1>Weniger planen. Mehr erleben.</h1><p>Ein Mikroabenteuer muss nicht kompliziert sein. Mit ein paar einfachen Entscheidungen wird aus einer Idee eine Tour, die zu deiner Zeit, deinem Budget und deiner Kondition passt.</p><h2>1. Wähle ein realistisches Ziel</h2><p>Für den Feierabend reichen oft ein kurzer Weg und ein schöner Ort. Am Wochenende darf es etwas mehr sein. Plane lieber überschaubar und lass Raum für Pausen.</p><h2>2. Prüfe Anreise und Rückweg</h2><p>Schau vorab nach Bahn- und Busverbindungen, Fahrradmitnahme und der letzten Rückfahrt. Lade Tickets und Karten möglichst offline auf dein Handy.</p><h2>3. Packe passend</h2><ul><li>Wasser und eine Kleinigkeit zu essen</li><li>Wettergerechte Kleidung und eine warme Extraschicht</li><li>Geladenes Handy, Powerbank und Offline-Karte</li><li>Erste-Hilfe-Set und persönliche Medikamente</li><li>Bei Übernachtung: Schlafsystem, Licht, Hygiene und Verpflegung</li></ul><h2>4. Wetter und Sicherheit</h2><p>Informiere dich über Wetter, Wegbeschaffenheit und Sperrungen. Passe die Tour an Tageslicht, Erfahrung und Fitness an. Dreh um, wenn sich die Bedingungen nicht gut anfühlen.</p><h2>5. Lass Platz für Zufall</h2><p>Eine Route ist Orientierung, kein Vertrag. Ein Picknickplatz, ein Aussichtspunkt oder ein stiller Waldweg kann das eigentliche Ziel werden. Es geht nicht um Leistung, sondern darum, draußen zu sein.</p><button class="planning-cta" data-go="tours">Passende Tour entdecken <span>›</span></button></article></section>
 <section id="buch" class="screen">
   <div class="page-head">
     <button class="back" data-go="home">‹</button>

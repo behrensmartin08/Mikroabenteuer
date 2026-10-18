@@ -70,8 +70,16 @@ let deferredPrompt = null;
 
 function show(id){document.querySelectorAll(".screen").forEach(s=>s.classList.remove("active"));document.getElementById(id).classList.add("active");window.scrollTo(0,0)}
 function renderTours(filter="Alle"){
+  const categoryKeywords = {"Nach Feierabend":["feierabend","abend","sonnenuntergang"],"Am Wochenende":["wochenende","wandern","radfahren","tagestour"],"Mit Kindern":["kinder","familie","familien"],"Mehrtagestouren":["mehrtag","camping","zelt","schweden"]};
   const list=document.getElementById("tourList");
-  const matches=tours.filter(t=>filter==="Alle"||t.region===filter);
+  const matches=tours.filter(t=>{
+    if(filter==="Alle") return true;
+    if(["Deutschland","Schweden","Ostwestfalen"].includes(filter)) return t.region===filter;
+    const words=categoryKeywords[filter];
+    if(!words) return t.region===filter;
+    const text=[t.title,t.subtitle,t.desc,t.tip,t.kind,t.region].filter(Boolean).join(" ").toLowerCase();
+    return words.some(word=>text.includes(word));
+  });
   if(!matches.length){
     list.innerHTML=`<article class="community-card"><h3>${filter}</h3><p>Hier gibt es noch keine eingetragenen Touren. Die Rubrik ist vorbereitet und kann nach und nach mit passenden Mikroabenteuern gefüllt werden.</p></article>`;
     return;
